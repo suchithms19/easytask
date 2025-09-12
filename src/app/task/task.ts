@@ -1,12 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface TaskData {
-  id: string;
-  userId: string;
-  title: string;
-  summary: string;
-  dueDate: string;
-}
+import { type TaskData } from './task.type';
 
 @Component({
   selector: 'app-task',
