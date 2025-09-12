@@ -10,6 +10,7 @@ import { type UserData } from './user.type';
 })
 export class User {  
   @Input({required:true}) user!:UserData;
+  @Input({required:true}) isSelected!:boolean;
   @Output() select = new EventEmitter();
 
   onSelect() {
