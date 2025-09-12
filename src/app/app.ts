@@ -12,7 +12,7 @@ import { Tasks } from './tasks/tasks';
 })
 export class App {
     users=DUMMY_USERS;
-    selectedUser='u1';
+    selectedUser!:string;
 
     get selectedUserName(){
         const user=this.users.find(u=>u.id===this.selectedUser);
