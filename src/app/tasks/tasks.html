@@ -1,13 +1,15 @@
 <section id="tasks">
     <header>
-        <h2>{{user}}'s Tasks</h2>
+        <h2>{{name}}'s Tasks</h2>
         <menu>
             <button>Add Task</button>
         </menu>
     </header>
     <ul>
-        <li>
-            
-        </li>
+        @for (task of getSelectedById; track task.id) {
+            <li>
+                <app-task />
+            </li>
+        }
     </ul>
 </section>

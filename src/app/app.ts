@@ -15,8 +15,7 @@ export class App {
     selectedUser!:string;
 
     get selectedUserName(){
-        const user=this.users.find(u=>u.id===this.selectedUser);
-        return user?user.name:'';
+      return this.users.find(u=>u.id===this.selectedUser);
     }
 
     onSelect(id:string) {

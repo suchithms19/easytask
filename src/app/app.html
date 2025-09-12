@@ -8,7 +8,7 @@
     }
   </ul>
   @if (selectedUserName) {
-    <app-tasks [user]="selectedUserName"/>
+    <app-tasks [name]="selectedUserName.name" [userId]="selectedUserName.id"/>
   } @else {
     <p>Select a user to see their tasks</p>
   }
