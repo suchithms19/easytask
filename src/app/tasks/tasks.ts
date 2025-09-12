@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Task } from '../task/task';
 import { dummyTasks } from '../dummy-tasks';
+import { AddTask } from '../add-task/add-task';
 
 @Component({
   selector: 'app-tasks',
-  imports: [Task],
+  imports: [Task,AddTask],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css'
 })
@@ -12,6 +13,7 @@ export class Tasks {
   @Input({required:true}) userId!:string;
   @Input({required:true}) name!:string;
   tasks = dummyTasks;
+  isAddingTask = false;
 
   get getSelectedById() {
     return this.tasks.filter((task) => task.userId === this.userId)
@@ -19,6 +21,10 @@ export class Tasks {
 
   onComplete(id:string) {
     this.tasks = this.tasks.filter((task)=> task.id != id)
+  }
+
+  addTask() {
+    this.isAddingTask = true;
   }
 
 }
