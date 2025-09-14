@@ -1,6 +1,6 @@
-<div>
+<app-card>
     <button [class.active]="isSelected" (click)="onSelect()">
         <img [src]="'assets/users/' + user.avatar" [alt]="user.name + ' photo'"/>
         <span>{{user.name}}</span>
     </button>
-</div>
+</app-card>
