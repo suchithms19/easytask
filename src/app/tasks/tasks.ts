@@ -27,4 +27,7 @@ export class Tasks {
     this.isAddingTask = true;
   }
 
+  onClickChange(){
+      this.isAddingTask = false;
+    }
 }
