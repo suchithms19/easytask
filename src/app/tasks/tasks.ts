@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Task } from '../task/task';
 import { dummyTasks } from '../dummy-tasks';
 import { AddTask } from '../add-task/add-task';
+import { taskSchema } from '../add-task/add-task.type';
 
 @Component({
   selector: 'app-tasks',
@@ -30,4 +31,15 @@ export class Tasks {
   onClickChange(){
       this.isAddingTask = false;
     }
+
+  onSubmit(newTask:taskSchema) {
+    this.tasks.push({
+      title:newTask.title,
+      summary:newTask.summary,
+      dueDate:newTask.date,
+      userId:this.userId,
+      id: new Date().toISOString()
+    });
+    this.isAddingTask = false;
+  }
 }

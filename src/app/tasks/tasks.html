@@ -1,5 +1,5 @@
 @if(isAddingTask){
-    <app-add-task (onClick)="onClickChange()"></app-add-task>
+    <app-add-task (onClick)="onClickChange()" (addTask)="onSubmit($event)"></app-add-task>
 }
 <section id="tasks">
     <header>
