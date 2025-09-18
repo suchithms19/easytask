@@ -1,59 +1,33 @@
-# Chat
+## Task Management App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+Lightweight Angular app that demonstrates a user/task list with add/complete interactions. Built with Angular 20 and TypeScript.
 
-## Development server
+### Tech stack
+- **Framework**: Angular 20 (Standalone components)
+- **Language**: TypeScript
+- **Tooling**: Angular CLI, Karma/Jasmine
 
-To start a local development server, run:
+### Prerequisites
+- Node.js 18+ (LTS recommended)
+- pnpm 9+
 
+### Setup
 ```bash
-ng serve
+pnpm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Scripts
+- **Start dev server**:
 ```bash
-ng generate component component-name
+pnpm start
 ```
+Opens `http://localhost:4200/` with hot reload.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### App structure (high level)
+- `src/app/app.ts` — root component holding selected user state
+- `src/app/user/` — `User` component for rendering a user item
+- `src/app/tasks/` — `Tasks` list for a selected user, add/complete logic
+- `src/app/task/` — individual `Task` item
+- `src/app/add-task/` — `AddTask` form component
+- `src/app/dummy-users.ts` — demo users
+- `src/app/dummy-tasks.ts` — demo tasks
